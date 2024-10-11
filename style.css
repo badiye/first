@@ -1,0 +1,107 @@
+body {
+    background-image: url(pics/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.header {
+    height: 50px;   
+}
+h1 {
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: cursive;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    transition: 0.7s ease;
+}
+.images {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Image properties */
+span img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: brightness(70%);
+}
+span .active {
+    width: 700px !important;
+    height: 600px !important;
+}
+.one {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+span {
+    width: 100px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+}
+.one span:first-child,
+.one span:last-child {
+    height: 100px;
+}
+.one span:nth-child(2),
+.one span:nth-child(9) {
+    height: 200px;
+}
+.one span:nth-child(3),
+.one span:nth-child(8) {
+    height: 300px;
+}
+.one span:nth-child(4),
+.one span:nth-child(7) {
+    height: 400px;
+}
+.one span:nth-child(5),
+.one span:nth-child(6) {
+    height: 500px;
+}
+.one img {
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.one img:hover {
+    filter: none;
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer {
+    text-align: center;
+}
+.congra {
+    font-size: 36px;
+    font-weight: bold;
+    animation: textShadow 1s ease-in-out infinite alternate;
+}
+
+@keyframes textShadow {
+    from {
+        text-shadow: 2px 2px #333;
+    }
+
+    to {
+        text-shadow: 10px 10px #333;
+    }
+}
